@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Main {
+
     @BeforeClass
     public void before(){
         WebDriverManager.chromedriver().setup();
@@ -24,7 +25,7 @@ public class Main {
 
     @Test
     public void test() throws InterruptedException {
-
+            System.out.println("Val");
             driver.get("https://google.com/");
             WebElement input = driver.findElement(By.className("gLFyf"));
             input.sendKeys("123\n");
